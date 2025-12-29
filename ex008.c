@@ -1,3 +1,9 @@
+/*8. Fazer um programa que leia o sexo (1=Masculino, 2=Feminino) e a altura de 
+um conjunto de pessoas. O final do conjunto é determinado quando a altura digitada for 0.
+Ao final, o programa deve calcular e mostrar: 
+a) A média de altura das mulheres. 
+b) A maior e a menor altura de todo o grupo.
+*/
 #include <stdio.h>
 #include <stdbool.h>
 
