@@ -36,7 +36,10 @@ return 0;
 #include <stdlib.h>
 #include <string.h>
 
-// [m] [e] [s] [s] [y] [a] [s
+// exemplo de como em pouscas iteracoes ja da pra inverter um array de caracteres
+// [m] [e] [s] [s] [y] [a] [s]
+// [s] [e] [s] [s] [y] [a] [m]
+// [s] [a] [y] [s] [s] [e] [m]
 void printInvetedWord(char word[]) {
    int start = 0;
    int end = strlen(word) - 1;
