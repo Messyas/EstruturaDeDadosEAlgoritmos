@@ -2,7 +2,6 @@
 
 - Lista de assuntos basilares que podem contribuir, pre condicoes obrigatorias e
   nao obrigatorias para se entender os assuntos discutidos.
-
 - Estrategias de memorizacao: Palacio da memoria
 - Estrategias de resolucao de problema
 - Como ler e entender um problema de estrutura de dados

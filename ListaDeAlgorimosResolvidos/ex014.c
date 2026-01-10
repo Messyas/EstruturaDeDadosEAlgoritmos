@@ -1,4 +1,4 @@
-\*
+/*
 Fazer um programa que leia 10 números inteiros e armazene-os em um vetor. 
 O programa deve ordenar esse vetor em ordem crescente 
 (do menor para o maior) e imprimir o vetor ordenado.
