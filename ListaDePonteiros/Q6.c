@@ -10,11 +10,13 @@ int toSquared(int *num1, int *num2)
 
 int main()
 {
-    int num1 = 2;
-    int num2 = 4;
+    int n1 = 2;
+    int n2 = 4;
 
-    int sum = toSquared(&num1, &num2);
+    int sum = toSquared(&n1, &n2);
     printf("%d A soma do dobro dos dois é: ", sum);
+    printf("Novo valor de n1: %d\n", n1);   
+    printf("Novo valor de n2: %d\n", n2);  
 
     return 0;
 }
