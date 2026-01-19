@@ -8,8 +8,8 @@ def regressiva_errada(i):
 def regressiva_correta(i):
     print(i)
     if i <= 1:
-        return
+        return #caso base
     else:
-        regressiva_correta(i-1)
+        regressiva_correta(i-1) #caso recursivo
 
 regressiva_correta(10)
