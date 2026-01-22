@@ -6,6 +6,8 @@
 #na notacao big O, arrays ainda sao mais rapidos em condicoes normais, hashtables
 #brilham em casos onde o numero de dados é extremamente grande.
 
+#dicionarios e tuplas em python basicamente usam o mesmo conceito.
+
 lista_telefonica = {}
 
 lista_telefonica["jenny"] = 842424
