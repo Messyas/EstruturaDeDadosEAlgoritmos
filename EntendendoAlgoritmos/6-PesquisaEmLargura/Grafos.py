@@ -6,13 +6,13 @@
 #crie uma tabela hash, porque com ela podemos usar uma pessoa como chave e outra como valor
 grafo = {}
 grafo["voce"] = ["alice", "bob", "claire"]
-grafo["bob"] = ["anuj", "goku black", "cruzim"]
-grafo["alice"] = ["ricardo milos"]
-grafo["claire"] = ["tomasturbando", "jonny bravo"]
+grafo["bob"] = ["anuj", "peggy"]
+grafo["alice"] = ["peggy"]
+grafo["claire"] = ["thom", "jonny"]
 grafo["anuj"] = []
-grafo["peggy"] = ["gosumm"]
-grafo["ricardo milos"] = ["jonny bravo"]
-grafo["jonny bravo"] = []
+grafo["peggy"] = []
+grafo["thon"] = []
+grafo["jonny"] = []
 #como as tablas hashes nao sao ordenadas, a ordem aqui nao vai fazer diferenca,
 #lembre-se que aqui estamos criando verteces, so importa com quem e nao a ordem em si
 #primerio crie uma lista
@@ -26,19 +26,39 @@ def pessoa_for_vendedor(nome):
      return nome[-1] == 'm'
 
 def pesquisa(nome):
-    fila_de_pesquisa = deque()
-    fila_de_pesquisa += grafo[nome] 
-    verificadas = []
+    fila_de_pesquisa = deque() #lista de adjacencias, nesse caso as arestas sao implicitas
+    fila_de_pesquisa += grafo[nome] #poderia usar um construtor de lista que seria igual
+    #seria a mesma coisa fila.extend(grafo[pessoa])
+    verificados = []
     while fila_de_pesquisa:
         pessoa = fila_de_pesquisa.popleft()
-        if not pessoa in verificadas:
+        if not pessoa in verificados:
             if pessoa_for_vendedor(pessoa):
-                print(pessoa + " e um vendedor de manga!")
+                print(pessoa + " é um vendedor de mongá!")  
                 return True
-        else:
-            fila_de_pesquisa += grafo[pessoa]
-            verificadas.append(pessoa)
-            print(pessoa + " Nao e vendedor de manga!")
+            else: 
+                fila_de_pesquisa += grafo[pessoa]
+                verificados.append(pessoa) 
+
     return False
 
 print(pesquisa("voce"))
+
+#esse tipo de pesquisa tem tempo de execucao dado de forma diferemte
+#como voce cria uma nova lista para adicionar novas pessoas
+#oq geralmente vai levar um tempo constante O(1). 
+# Fazer isso pra cada pessoa era o tempo de execucuao O (numero de pessoas) no total.
+# Entao a pesquisa em largura para este caso, tem tempo de execucao O (num de pessoas x num de arestas)
+# Geralmente representado por O (V + A)
+
+
+
+#Quando usar esse metodo com Dicionario (Hashtable)?
+#Ele tam uma serie de vantagnes:
+#1. É mais rapido de escrever
+#2. Serializacao,é muito facil de salvar em um arquivo json e enviar pra uma api, pois é teto puro
+#3. Simplicidade para testes tecnicos
+#Desvantagens:
+#1. A estrutura do objeto é simples aqui, entao representar uma entidade pode ficar mais dificil, 
+# acessar atributos etc, o dicionario fica baguncado e voce precisa de sub grafos. Melhor usar classes
+
