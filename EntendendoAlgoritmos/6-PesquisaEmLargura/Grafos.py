@@ -20,6 +20,11 @@ grafo["jonny"] = []
 #contudo existem os dígrafos, que sao grafos onde existe direcao para onde as arestas
 #apontam, eles sao representados com linhas com setas. Se nao for direcionado, nao tem seta.
 
+#Esse exemplo a seguir se trata de um algoritmo de busca em largura
+#Em ingles: Breadth-First Search - BFS
+#Ele usa uma fila (FIFO)para gerenciar os nos,
+#Ele visita todos os vizinhos (Vertices) antes 
+#de ir para os vizinhos dos vizinhos
 from collections import deque
 
 def pessoa_for_vendedor(nome):
@@ -62,3 +67,5 @@ print(pesquisa("voce"))
 #1. A estrutura do objeto é simples aqui, entao representar uma entidade pode ficar mais dificil, 
 # acessar atributos etc, o dicionario fica baguncado e voce precisa de sub grafos. Melhor usar classes
 
+#usado para problemas de distancia minimas, pode ser usado para labirintos
+#redes e problemas de fluxo
