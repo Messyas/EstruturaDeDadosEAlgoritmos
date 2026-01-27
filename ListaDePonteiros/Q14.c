@@ -1,6 +1,6 @@
 /**
-14) Crie uma funAœo que receba dois parA›metros: um array e um valor do mesmo tipo do array.
- A funAœo devera­ preencher os elementos de array com esse valor. Nao utilize Indices para 
+14) Crie uma funcao que receba dois parametros: um array e um valor do mesmo tipo do array.
+ A funcaoi devera­ preencher os elementos de array com esse valor. Nao utilize Indices para 
  percorrer o array, apenas aritmetica de ponteiros.
 */
 
