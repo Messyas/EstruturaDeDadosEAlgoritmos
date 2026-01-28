@@ -28,7 +28,6 @@ void selectionSort(float vetor[], unsigned tamanhoVetor) {
         posMenor = i; // Assumimos inicialmente que o primeiro da fila bagunçada é o menor
         
         // Loop Interno: Procura o verdadeiro menor número no restante da lista
-        // Correção: Removido o 'i' extra na declaração do loop (era 'cont i', virou 'cont')
         for (cont = i + 1; cont < tamanhoVetor; cont++) {
             if (vetor[cont] < vetor[posMenor]) {
                 posMenor = cont; // Encontramos um candidato menor! Atualizamos o índice.
@@ -55,7 +54,6 @@ void imprimirVetor(float vetor[], unsigned tamanho) {
 }
 
 int main (){
-    // Correção: Alterado para float para casar com a função selectionSort
     // Adicionado valores decimais para provar que funciona com float
     float vetor[] = {500.0, 20.0, 4.5, 100.0, 6.0, 1000.0, 10000.0, 20000.0, -10.0};
 
