@@ -16,28 +16,33 @@ Usar um algoritmo complexo gastaria muita memória de pilha (stack). O Selection
 é "in-place" (não gasta memória extra) e muito leve para a CPU iniciar.
 */
 
-void selectionSort(float vetor[], unsigned tamanhoVetor) {
+void selectionSort(float vetor[], unsigned tamanhoVetor)
+{
     // Vamos até o penúltimo porque, se n-1 itens estão certos, o último automaticamente sobra no lugar certo.
     unsigned penultimo = tamanhoVetor - 1;
     float temp;
     unsigned i, cont;
     unsigned posMenor;
-    
+
     // Loop Externo: Define a fronteira entre a parte ordenada e a não ordenada
-    for (i = 0; i < penultimo; i++) {
+    for (i = 0; i < penultimo; i++)
+    {
         posMenor = i; // Assumimos inicialmente que o primeiro da fila bagunçada é o menor
-        
+
         // Loop Interno: Procura o verdadeiro menor número no restante da lista
-        for (cont = i + 1; cont < tamanhoVetor; cont++) {
-            if (vetor[cont] < vetor[posMenor]) {
+        for (cont = i + 1; cont < tamanhoVetor; cont++)
+        {
+            if (vetor[cont] < vetor[posMenor])
+            {
                 posMenor = cont; // Encontramos um candidato menor! Atualizamos o índice.
             }
         }
-        
+
         // TROCA (SWAP): Coloca o menor elemento encontrado na posição correta (i)
         // Note que isso acontece apenas UMA vez por iteração do loop externo.
         // Isso economiza operações de escrita (write) na memória.
-        if (posMenor != i) { // Pequena otimização: só troca se for necessário
+        if (posMenor != i)
+        { // Pequena otimização: só troca se for necessário
             temp = vetor[i];
             vetor[i] = vetor[posMenor];
             vetor[posMenor] = temp;
@@ -45,15 +50,18 @@ void selectionSort(float vetor[], unsigned tamanhoVetor) {
     }
 }
 
-void imprimirVetor(float vetor[], unsigned tamanho) {
+void imprimirVetor(float vetor[], unsigned tamanho)
+{
     printf("[ ");
-    for (unsigned i = 0; i < tamanho; i++) {
+    for (unsigned i = 0; i < tamanho; i++)
+    {
         printf("%.2f ", vetor[i]);
     }
     printf("]\n");
 }
 
-int main (){
+int main()
+{
     // Adicionado valores decimais para provar que funciona com float
     float vetor[] = {500.0, 20.0, 4.5, 100.0, 6.0, 1000.0, 10000.0, 20000.0, -10.0};
 
