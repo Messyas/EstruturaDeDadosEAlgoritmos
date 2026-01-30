@@ -84,3 +84,15 @@ int main()
 
 // quase sempre o melhor
 // em poucos casos pode perder pro ordenacao por selecao ou pro heapsort
+// Uma avaliacao interessnate é que como o quick sort divide o vetor em
+// 2, se o pivor for ruim pode acontecer desses intervalos serem desbalanceados
+// entao vai ficar com um lado parado porque ordenou rapido o so de um lado
+// vai fazer uma operacao gigante.
+// um pivor bom é quando metade dos elementos é menor que ele e
+// a outra metade é maior que ele.
+
+// no pior caso é quadratico o(n^2)
+// no melhor caso é o(N log N)
+// melhor que ordenacao por selecao por exemplo
+
+//Projeto e analise de algorimo daria pra avaliar o custo do algoritmo.
