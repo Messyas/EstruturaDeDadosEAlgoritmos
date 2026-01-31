@@ -7,7 +7,7 @@
 /**
  * ALGORITMOS DE ORDENAÇÃO
  */
-#define TAMANHO 50000
+#define TAMANHO 20000
 
 // 1. QuickSort (O(N log N))
 void quicksort(float *vetor, int inicio, int fim)
@@ -256,3 +256,28 @@ int main()
     free(vetorTeste);
     return 0;
 }
+
+/**
+ * Alguns pontos legais sobre os principais algoritmos
+ *
+ * quick sort vs merge sort
+ *
+ * QuickSort:
+ * 1.Usa menos ram, bem otimizado pra isso (in place).
+ * 2.Em geral tende a ser mais rapido, exceto no pior caso que o algorimo vira O(n^2)
+ * 3.Menos estavel
+ * 4.Ruim para listas encadeadas, ele é melhor pra array
+ * 5.Apanha no pior caso, se o pivor cair no elemento sais alto ou mais baixo
+ * pode dar bem ruim (tempo quadratico)
+ *
+ * MergeSort:
+ * 1. Confiavel como um relogio suiço, sempre vai ser O(n log n), mesmo nos casos
+ * onde todos os elementos ja estao quase ordenados.
+ * 2. Nao troca os elementos corretos aleatoriamente durante a ordenecao
+ * 3. Muito melhor para listas encadeadas (linked Lists)
+ * 4. Util quando precisa garantir que o programa nunca demora mais do que
+ * o esperado (sistemas de tempo real)
+ *
+ * A ordenacao por selecao pode ate ser usado pra micro vetores, mas é so isso
+ * O resto acredito que so é utils saber que nao se deve usar, principlamente o bolha podre
+ */
