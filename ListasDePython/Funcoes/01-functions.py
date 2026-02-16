@@ -30,8 +30,24 @@ def soma (lista):
         total += e
     return total
 
-def meida (lista):
+def media (lista):
     return (soma(lista)/len(lista))
+
+#Agora formas mais pythonicas e mais eficientes.
+
+#retorna o index do valor
+def searchIndex(lista, valor):
+    try:
+        return lista.index(valor)
+    except ValueError:
+        return None
+
+def fatorial (n):
+    fat = 1
+    while n > 1:
+        fat *= n
+        n -= 1
+    return fat
 
 
 print(maior(10, 4))
@@ -40,3 +56,6 @@ print(isMultiplo(10, 5))
 print(area_quadrado(6))
 print(area_triangulo(10, 7))
 print((pesquisa(L, 25)))
+print(media(L))
+print(fatorial(5))
+print(searchIndex(L, 10))
