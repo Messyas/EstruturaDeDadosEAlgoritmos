@@ -1,12 +1,12 @@
 
 #conjunto de chave x valor em um array, a chave identifica o valor da posicao
 #para lidar com dados de mesmas chaves sao geradas linkedlists pra cada tipo de chave
-#assim é possivel acessar rapidamente um determinado dado, memso em listas grandes
+#assim é possivel acessar rapidamente um determinado dado, memso em listas grandes.
 #nao se engane, apesar de ter vantagens em relacao a arrays e linkedlists puras
 #na notacao big O, arrays ainda sao mais rapidos em condicoes normais, hashtables
 #brilham em casos onde o numero de dados é extremamente grande.
 
-#dicionarios e tuplas em python basicamente usam o mesmo conceito.
+#dicionarios e tuplas ou dicionarios em python basicamente usam o mesmo conceito.
 
 lista_telefonica = {}
 
