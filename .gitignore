@@ -1,0 +1,13 @@
+# Executáveis
+*.exe
+
+# Arquivos gerados pelo Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
