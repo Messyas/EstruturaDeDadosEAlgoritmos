@@ -1,10 +1,9 @@
 import { listaLivros as livros } from "./listaLivros.js";
 
 let maisBarato = 0;
-let atual = 0;
 
 //busca o menor valor
-for (atual; atual < livros.length; atual++) {
+for (let atual = 0; atual < livros.length; atual++) {
   if (livros[atual].preco < livros[maisBarato].preco) {
     maisBarato = atual;
   }
@@ -16,7 +15,7 @@ console.log(
 
 let maisCaro = 0;
 //busca o menor maior
-for (atual = 0; atual < livros.length; atual++) {
+for (let atual = 0; atual < livros.length; atual++) {
   if (livros[atual].preco > livros[maisCaro].preco) {
     maisCaro = atual;
   }
